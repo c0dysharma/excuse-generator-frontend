@@ -22,7 +22,8 @@ export default function ExcuseGenerator() {
     setExcuseText("")
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/generate`, {
+      console.log(process.env.NEXT_PUBLIC_SERVER_URL)
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
